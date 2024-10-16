@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="" />
+    <meta name="theme-color" content="" />
+    <meta property="og:image" content="./files/og-image.png" />
+
+    <title>TALKCHAIN</title>
+
+    <style>
+      .talkchain-process {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .process-title {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #333;
+      }
+      .process-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .process-step {
+        display: flex;
+        align-items: center;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .step-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #4a90e2;
+        margin-right: 1.5rem;
+        min-width: 60px;
+      }
+      .step-content {
+        font-size: 2rem;
+        color: #555;
+      }
+      @media (max-width: 768px) {
+        .process-title {
+          font-size: 2.5rem;
+        }
+        .step-number {
+          font-size: 2.5rem;
+        }
+        .step-content {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="./files/swiper-bundle.min.css" />
+    <script src="./files/swiper-bundle.min.js"></script>
+
+    <!-- xe icon -->
+    <link rel="stylesheet" href="./files/xeicon.min.css" />
+
+    <!-- jquery -->
+    <script src="./files/jquery.min.js"></script>
+    <!-- jquery.validate & jalert -->
+    <script src="./files/jalert.js"></script>
+    <link rel="stylesheet" href="./files/jquery-confirm.min.css" />
+    <script src="./files/jquery-confirm.min.js"></script>
+    <script src="./files/jquery.validate.min.js"></script>
+
+    <!-- Popper.js -->
+    <script src="./files/popper.min.js"></script>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./files/boot_custom.css" />
+    <script src="./files/bootstrap.bundle.min.js"></script>
+
+    <!--js-->
+    <script src="./files/custom.js" defer=""></script>
+    <script src="./files/gsap.min.js"></script>
+    <script src="./files/ScrollTrigger.min.js"></script>
+    <script src="./files/ScrollToPlugin.min.js"></script>
+
+    <!--aos-->
+    <link href="./files/aos.css" rel="stylesheet" />
+    <script src="./files/aos.js"></script>
+
+    <script src="./files/1175923056974054" async=""></script>
+    <script async="" src="./files/fbevents.js"></script>
+
+    <script
+      src="./files/lottie.min.js"
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- datetimepicker-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./files/jquery.datetimepicker.min.css"
+    />
+    <script src="./files/jquery.datetimepicker.full.min.js"></script>
+
+    <!-- summernote -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./files/summernote-bs4.min.css"
+    />
+    <script type="text/javascript" src="./files/summernote-bs4.min.js"></script>
+
+    <!-- ckeditor -->
+    <link rel="stylesheet" href="./files/ckeditor5.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.0/ckeditor5.js",
+          "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.0/"
+        }
+      }
+    </script>
+    <script type="text/javascript" src="./files/uploadAdpater.js"></script>
+
+    <!--design-->
+    <link rel="stylesheet" href="./files/design_hj.css" />
+    <link rel="stylesheet" href="./files/default_dev.css" />
+    <script type="text/javascript" src="./files/default_dev.js"></script>
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin=""
+      href="./files/pretendardvariable.css"
+    />
+  </head>
+  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <div id="header" class="header header2">
+      <div class="hd_pc">
+        <div class="logo">
+          <a
+            style="cursor: pointer"
+            onclick="f_localStorage_reset_go(&#39;/&#39;)"
+          >
+            <img src="./files/logo_w.png" alt="logo" class="logo_on" />
+
+            <img src="./files/logo.png" alt="logo" class="logo_off" />
+          </a>
+        </div>
+        <div class="pc_nav">
+          <ul class="gnb_1dul d-flex">
+            <li class="gnb_1dli">
+              <a style="cursor: pointer" onclick="go_guide(&#39;/guide&#39;)"
+                >User Guide</a
+              >
+            </li>
+            <li class="gnb_1dli">
+              <a
+                style="cursor: pointer"
+                onclick="f_localStorage_reset_go(&#39;/point&#39;)"
+                >Recharge Points</a
+              >
+            </li>
+            <li class="gnb_1dli">
+              <a
+                style="cursor: pointer"
+                onclick="f_localStorage_reset_go(&#39;/mypage_ad/approve&#39;)"
+                >Ad Application History</a
+              >
+            </li>
+
+            <li class="gnb_1dli">
+              <a style="cursor: pointer" onclick="go_guide(&#39;/pakage&#39;)"
+                >Package
+                <img
+                  src="./files/top_love.gif"
+                  style="width: 17px; margin-bottom: 3px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- header-->
+        <div class="head_btn">
+          <button
+            type="button"
+            class="btn cart_btn cart_alr"
+            onclick="f_localStorage_reset_go(&#39;/cart&#39;)"
+          >
+            <img src="./files/ic_cart.png" />
+            <p>0</p>
+          </button>
+
+          <!-- before login-->
+          <button
+            type="button"
+            class="btn login_btn"
+            onclick="f_localStorage_reset_go(&#39;/login&#39;)"
+          >
+            <img src="./files/ic_login.png" />
+          </button>
+
+          <button type="button" class="btn hd_menu_btn d-block d-lg-none px-0">
+            <a href="/#menu"></a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="m_menu_wr">
+      <div class="m_nav">
+        <nav class="nav_wr">
+          <div class="menu_hd">
+            <h1 class="m_logo">
+              <img src="./files/logo.png" />
+            </h1>
+            <a class="close_btn" href="/#menu"
+              ><img src="./files/ic_close.png"
+            /></a>
+          </div>
+          <div class="m_nav_menu container-md fs_16 fw_600 mt_20">
+            <div class="m_profile">
+              <div class="pro_img">
+                <div class="rect">
+                  <img src="./files/ai_pro.png" alt="profile" />
+                </div>
+              </div>
+              <div class="pro_txt">
+                <p class="fs_14 fw_700 wh_pre line_h1_4">
+                  Please log in to use the service!
+                </p>
+                <a
+                  style="cursor: pointer"
+                  onclick="f_localStorage_reset_go(&#39;/login&#39;)"
+                  class="fs_14 mt-3"
+                  >Login</a
+                >
+              </div>
+            </div>
+            <ul class="mt_20 mx_n20">
+              <li class="gnb_1dli">
+                <ul>
+                  <li
+                    id="m_nav_li02"
+                    class="m_nav_li"
+                    style="cursor: pointer"
+                    onclick="go_guide(&#39;/guide&#39;)"
+                  >
+                    <a class="gnb_1dli_wr">
+                      <div class="gnb_1dli_tit">
+                        <img src="./files/ic_nav_02.png" />
+                        <p class="fs_16 fw_700">User Guide</p>
+                      </div>
+                      <img
+                        src="./files/ic_right_select.png"
+                        style="width: 2rem"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_1dli">
+                <ul>
+                  <li id="m_nav_li03" class="m_nav_li">
+                    <a
+                      class="gnb_1dli_wr"
+                      style="cursor: pointer"
+                      onclick="f_localStorage_reset_go(&#39;/point&#39;)"
+                    >
+                      <div class="gnb_1dli_tit">
+                        <img src="./files/ic_nav_03.png" />
+                        <p class="fs_16 fw_700">Charge Point</p>
+                      </div>
+                      <img
+                        src="./files/ic_right_select.png"
+                        style="width: 2rem"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_1dli">
+                <ul>
+                  <li id="m_nav_li04" class="m_nav_li">
+                    <a
+                      class="gnb_1dli_wr"
+                      style="cursor: pointer"
+                      onclick="f_localStorage_reset_go(&#39;/mypage_ad/approve&#39;)"
+                    >
+                      <div class="gnb_1dli_tit">
+                        <img src="./files/ic_nav_04.png" />
+                        <p class="fs_16 fw_700">Ad Application History</p>
+                      </div>
+                      <img
+                        src="./files/ic_right_select.png"
+                        style="width: 2rem"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="gnb_1dli">
+                <ul>
+                  <li id="m_nav_li06" class="m_nav_li">
+                    <a
+                      class="gnb_1dli_wr"
+                      style="cursor: pointer"
+                      onclick="go_guide(&#39;https://provediai.imweb.me/&#39;)"
+                    >
+                      <div class="gnb_1dli_tit">
+                        <img src="./files/ic_nav_06.png" />
+                        <p class="fs_16 fw_700">
+                          Package
+                          <img
+                            src="./files/top_love.gif"
+                            style="width: 17px; margin-bottom: 3px"
+                          />
+                        </p>
+                      </div>
+                      <img
+                        src="./files/ic_right_select.png"
+                        style="width: 2rem"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="menu_bg"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="idx_pg pt-0">
+        <section id="main_section">
+          <div class="main_sec">
+            <div class="main_box_wr">
+              <div class="main_box_cont box1">
+                <img src="./files/main_box01.png" />
+              </div>
+              <div class="main_box_cont box2">
+                <img src="./files/main_box02.png" />
+              </div>
+              <div class="main_box_cont box3">
+                <img src="./files/main_box03.png" />
+              </div>
+              <div class="main_box_cont box4">
+                <img src="./files/main_box04.png" />
+              </div>
+              <div class="main_box_cont box5">
+                <img src="./files/main_box05.png" />
+              </div>
+              <div class="main_box_cont box6">
+                <img src="./files/main_box06.png" />
+              </div>
+              <div class="main_box_cont box7">
+                <img src="./files/main_box09.png" />
+              </div>
+              <div class="main_box_cont box8">
+                <img src="./files/main_box07.png" />
+              </div>
+              <div class="main_box_cont box9">
+                <img src="./files/main_box08.png" />
+              </div>
+            </div>
+            <div>
+              <div class="main_sec_txt">
+                <p class="wh_pre main_sec_tit">
+                  "Welcome to TalkChain! Share knowledge and ideas on various
+                  topics and earn rewards through constructive discussions"
+                </p>
+                <p class="main_sec_subtit">join us now</p>
+                <button
+                  type="button"
+                  class="btn start_btn"
+                  onclick="location.href='https://talkchain.gitbook.io/talkchain'"
+                >
+                  View Whitepaper
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section01">
+          <div class="section01">
+            <div class="section01_tit">
+              <h2 class="tit_h1 wh_pre text-center">
+                <span class="text-primary"
+                  >Discussion Participation Prompt</span
+                >
+                "Share your thoughts and connect with other users to earn
+                TalkChain! Your ideas can change the world."
+              </h2>
+              <p class="tit_h4 fw_300 text-center mt_25">
+                the world will be amazing
+              </p>
+            </div>
+            <div class="pro_card_wr">
+              <div class="pro_card_line">
+                <div class="pro_card">
+                  <img src="./files/pro_card01.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card02.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card03.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card04.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card05.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card06.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card07.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card08.png" />
+                </div>
+
+                <div class="pro_card">
+                  <img src="./files/pro_card01.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card02.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card03.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card04.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card05.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card06.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card07.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card08.png" />
+                </div>
+
+                <div class="pro_card">
+                  <img src="./files/pro_card01.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card02.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card03.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card04.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card05.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card06.png" />
+                </div>
+                <div class="pro_card">
+                  <img src="./files/pro_card07.png" />
+                </div>
+                <div class="pro_card pro_card_mt">
+                  <img src="./files/pro_card08.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section02">
+          <div class="section02 container">
+            <div
+              class="section02_top sec02_cont aos-init"
+              data-aos="fade-right"
+            >
+              <div class="section02_lf">
+                <img src="./files/lf_img1.png" />
+              </div>
+              <div class="section02_rg">
+                <div>
+                  <p class="section02_rg_tit wh_pre">
+                    Just enter a keyword and we will recommend ai keywords and
+                    easily recommend cafes by selecting the desired category.
+                  </p>
+                  <p class="section02_rg_subtit wh_pre">
+                    We have a list of 500 mom cafes / financial technology /
+                    local cafes / automobiles, etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section02_md sec02_cont aos-init" data-aos="fade-left">
+              <div class="section02_lf">
+                <img src="./files/lf_img2.gif" />
+              </div>
+              <div class="section02_rg">
+                <div>
+                  <p class="section02_rg_tit wh_pre">
+                    AI Search Volume-based Keyword Automatic Recommendation
+                  </p>
+                  <p class="section02_rg_subtit wh_pre">
+                    Big Data-based Top Exposure Keyword Recommendation
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section02_bt sec02_cont aos-init" data-aos="fade-right">
+              <div class="section02_lf">
+                <img src="./files/lf_img3.gif" />
+              </div>
+              <div class="section02_rg">
+                <div>
+                  <p class="section02_rg_tit wh_pre">
+                    AI provides domestic cafe precision analysis grade and
+                    activity level
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section03">
+          <div class="section03 container">
+            <div class="section03_tit">
+              <p class="tit_h1 mt_25 line_h1_5 wh_pre">
+                Decentralized intellectual discussions with blockchain rewards
+                Join TalkChain and revolutionize online conversations
+              </p>
+              <p class="tit_h4 fw_300 text-gray2 mt_25">
+                TalkChain leverages blockchain technology to create a
+                transparent, secure, and rewarding environment for meaningful
+                debates and knowledge sharing.
+              </p>
+            </div>
+            <div
+              class="swiper sec03_Swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+            >
+              <div
+                class="swiper-wrapper"
+                id="swiper-wrapper-10bc7180e67ce569"
+                aria-live="off"
+                style="
+                  transition-duration: 0ms;
+                  transform: translate3d(-2536px, 0px, 0px);
+                  transition-delay: 0ms;
+                "
+              >
+                <div
+                  class="swiper-slide swiper-slide-active"
+                  role="group"
+                  aria-label="1 / 3"
+                  data-swiper-slide-index="0"
+                  style="width: 1268px"
+                >
+                  <div class="sec03_swCont">
+                    <img src="./files/sec03_img1.png" />
+                    <div class="swTxt">
+                      <p class="tit_h2">Hot Deal Type</p>
+                      <p
+                        class="tit_h4 fw_300 text-gray2 mt_25 wh_pre line_h1_4"
+                      >
+                        Engage in trending topics and earn TalkChain tokens for
+                        valuable contributions. Your insights are securely
+                        recorded on the blockchain, ensuring fair recognition
+                        and rewards. Participate in token-incentivized
+                        discussions on current events and hot topics.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-next"
+                  role="group"
+                  aria-label="2 / 3"
+                  data-swiper-slide-index="1"
+                  style="width: 1268px"
+                >
+                  <div class="sec03_swCont">
+                    <img src="./files/sec03_img2.png" />
+                    <div class="swTxt">
+                      <p class="tit_h2">Late Type</p>
+                      <p
+                        class="tit_h4 fw_300 text-gray2 mt_25 wh_pre line_h1_4"
+                      >
+                        Join ongoing discussions with blockchain-verified
+                        credibility. Your late contributions are valued and
+                        rewarded based on impact, not timing. Utilize smart
+                        contracts to ensure fair compensation for quality
+                        insights, regardless of when you join the conversation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-prev"
+                  role="group"
+                  aria-label="3 / 3"
+                  data-swiper-slide-index="2"
+                  style="width: 1268px"
+                >
+                  <div class="sec03_swCont">
+                    <img src="./files/sec03_img3.png" />
+                    <div class="swTxt">
+                      <p class="tit_h2">Question Type</p>
+                      <p
+                        class="tit_h4 fw_300 text-gray2 mt_25 wh_pre line_h1_4"
+                      >
+                        Pose thought-provoking questions and earn tokens for
+                        sparking engaging discussions. Smart contracts ensure
+                        automatic rewards for questions that generate
+                        high-quality responses. Participate in a decentralized
+                        knowledge-sharing ecosystem where curiosity is
+                        incentivized.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sec03_swArrow">
+                <div
+                  class="swiper-button-next"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Next slide"
+                  aria-controls="swiper-wrapper-10bc7180e67ce569"
+                ></div>
+                <div
+                  class="swiper-button-prev"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Previous slide"
+                  aria-controls="swiper-wrapper-10bc7180e67ce569"
+                ></div>
+              </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="talkchain-process">
+          <h2 class="process-title">
+            Participate in Blockchain-Powered Debates with TalkChain
+          </h2>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">Explore topics and stake tokens</div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">Choose discussion type</div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                Contribute with blockchain verification
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">Earn rewards via smart contracts</div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">5</div>
+              <div class="step-content">Track reputation on the blockchain</div>
+            </div>
+          </div>
+        </section>
+        <section id="section05">
+          <div class="section05 container">
+            <div>
+              <div class="text-center">
+                <p class="tit_h1">Unmatched Transparency and Fairness</p>
+                <p class="tit_h4 fw_300 wh_pre text-gray2 mt_25 line_h1_4">
+                  We are a specialized blockchain-powered discussion platform,
+                  not just another social media site. Our decentralized system
+                  ensures transparent rewards and fair participation, providing
+                  the most equitable environment for intellectual discourse.
+                </p>
+              </div>
+              <div class="sec05_img touch_scroll scroll_bar_none">
+                <div data-aos="fade-up" class="aos-init">
+                  <img src="./files/sec05_img.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section06">
+          <div class="section06 container">
+            <div class="text-center">
+              <p class="tit_h4 fw_900 text-white">Why?</p>
+              <p class="tit_h1 mt-3 line_h1_4 text-white">
+                Why Choose TalkChain for Decentralized Discussions?
+              </p>
+            </div>
+
+            <ul class="row row-cols-lg-4 row-cols-2 sec06_cont_wr">
+              <li class="col">
+                <div class="sec06_cont">
+                  <div>
+                    <img src="./files/sec06_icon1.png" />
+                    <p class="tit_h4 fw_500 mt-3">Active Discussion Rooms</p>
+                    <p
+                      class="cont_num counter mt-3"
+                      data-start="0"
+                      data-end="121200"
+                    >
+                      121,200
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="sec06_cont">
+                  <div>
+                    <img src="./files/sec06_icon2.png" />
+                    <p class="tit_h4 fw_500 mt-3">Registered Users</p>
+                    <p
+                      class="cont_num counter mt-3"
+                      data-start="0"
+                      data-end="1092000"
+                    >
+                      1,092,000
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="sec06_cont no_bg">
+                  <div class="">
+                    <img src="./files/sec06_icon3.png" />
+                    <p class="tit_h4 fw_500 mt-3">Smart Contracts Executed</p>
+                    <p
+                      class="cont_num counter mt-3"
+                      data-start="0"
+                      data-end="582000"
+                    >
+                      582,000
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="col">
+                <div class="sec06_cont">
+                  <div class="sec06_bg">
+                    <img src="./files/sec06_icon4.png" />
+                    <p class="tit_h4 fw_500 mt-3">Tokens Distributed</p>
+                    <p
+                      class="cont_num counter mt-3"
+                      data-start="0"
+                      data-end="8920000"
+                    >
+                      8,920,000
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script>
+      AOS.init();
+      var swiper = new Swiper(".sec03_Swiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+      //Main banner text slider
+      var swiper = new Swiper(".sec04_Swiper_txt", {
+        loop: true,
+        direction: "horizontal",
+        slidesPerView: "auto",
+        breakpoints: {
+          991.98: {
+            direction: "vertical",
+          },
+        },
+      });
+      var swiper2 = new Swiper(".sec04_Swiper_img", {
+        loop: true,
+        effect: "fade",
+        spaceBetween: 0,
+        parallax: true,
+        thumbs: {
+          swiper: swiper,
+        },
+        navigation: {
+          nextEl: ".swiper_btn_wr .swiper-button-next",
+          prevEl: ".swiper_btn_wr .swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <a href="#" target="_brank" class="kakao_ch" id="kakao_channel"></a>
+    <a href="/" class="go_top2" id="go_top2"></a>
+
+    <footer id="footer">
+      <div class="ft_wr container">
+        <div class="ft_top">
+          <div class="ft_link">
+            <ul class="flex-wrap">
+              <li>
+                <a href="/terms/service">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/terms/info">Privacy Policy</a>
+              </li>
+              <li><a href="/notice">Notice</a></li>
+              <li>
+                <a href="https://open.kakao.com/o/saOyIAAg"
+                  >Agency Partnership Inquiry/Partnership Inquiry</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="ft_customer">
+            <img src="./files/ic_ft_icon.png" />
+            <div>
+              <p class="number mb-2">+65-12170-8287-1553</p>
+              <p class="info_txt wh_pre">
+                Every day (including holidays) 9:00 AM ~ 6:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="ft_bt">
+          <img src="./files/logo_w.png" />
+        </div>
+
+        <p class="copy">Copyright TeamO2 Co., Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+    <div
+      class="modal fade"
+      id="loding"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content" style="background: none">
+          <div class="modal-body">
+            <div class="loding_wr">
+              <div class="lottie-container" id="lottie3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 50 50"
+                  width="50"
+                  height="50"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    transform: translate3d(0px, 0px, 0px);
+                    content-visibility: visible;
+                  "
+                >
+                  <defs>
+                    <clippath id="__lottie_element_2">
+                      <rect width="50" height="50" x="0" y="0"></rect>
+                    </clippath>
+                  </defs>
+                  <g clip-path="url(#__lottie_element_2)">
+                    <g
+                      transform="matrix(0.7071067690849304,-0.7071067690849304,0.7071067690849304,0.7071067690849304,24.687999725341797,24.937999725341797)"
+                      opacity="0.15030000000003654"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(0,-1,1,0,24.687999725341797,24.937999725341797)"
+                      opacity="0.05030000000003654"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(-0.7071067690849304,-0.7071067690849304,0.7071067690849304,-0.7071067690849304,24.687999725341797,24.937999725341797)"
+                      opacity="0.34789999999974425"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(-1,0,0,-1,24.687999725341797,24.937999725341797)"
+                      opacity="0.6503000000000365"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(-0.7071067690849304,0.7071067690849304,-0.7071067690849304,-0.7071067690849304,24.687999725341797,24.937999725341797)"
+                      opacity="0.5503000000000365"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(0,1,-1,0,24.687999725341797,24.937999725341797)"
+                      opacity="0.45030000000003656"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(0.7071067690849304,0.7071067690849304,-0.7071067690849304,0.7071067690849304,24.687999725341797,24.937999725341797)"
+                      opacity="0.3503000000000365"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g
+                      transform="matrix(1,0,0,1,24.687999725341797,24.937999725341797)"
+                      opacity="0.25030000000003655"
+                      style="display: block"
+                    >
+                      <g
+                        opacity="1"
+                        transform="matrix(1,0,0,1,0.24799999594688416,-12.663999557495117)"
+                      >
+                        <path
+                          fill="rgb(255,255,255)"
+                          fill-opacity="1"
+                          d=" M2,-8 C2,-8 2,0 2,0 C2,1.1038000583648682 1.1038000583648682,2 0,2 C0,2 0,2 0,2 C-1.1038000583648682,2 -2,1.1038000583648682 -2,0 C-2,0 -2,-8 -2,-8 C-2,-9.103799819946289 -1.1038000583648682,-10 0,-10 C0,-10 0,-10 0,-10 C1.1038000583648682,-10 2,-9.103799819946289 2,-8z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let anmation3 = bodymovin.loadAnimation({
+        container: document.getElementById("lottie3"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "./files/spiner.json",
+      });
+      $(document).ready(function () {
+        const $counters = $(".counter");
+        const exposurePercentage = 100;
+        const duration = 1000;
+
+        const addCommas = true; // ex) true = 1,000 / false = 1000
+
+        function updateCounter($el, start, end) {
+          let startTime;
+          function animateCounter(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = (timestamp - startTime) / duration;
+            const current = Math.round(start + progress * (end - start));
+            const formattedNumber = addCommas
+              ? current.toLocaleString()
+              : current;
+            $el.text(formattedNumber);
+
+            if (progress < 1) {
+              requestAnimationFrame(animateCounter);
+            } else {
+              $el.text(addCommas ? end.toLocaleString() : end);
+            }
+          }
+          requestAnimationFrame(animateCounter);
+        }
+
+        $(window)
+          .on("scroll", function () {
+            $counters.each(function () {
+              const $el = $(this);
+              if (!$el.data("scrolled")) {
+                const rect = $el[0].getBoundingClientRect();
+                const winHeight = window.innerHeight;
+                const contentHeight = rect.bottom - rect.top;
+
+                if (
+                  rect.top <=
+                    winHeight - (contentHeight * exposurePercentage) / 100 &&
+                  rect.bottom >= (contentHeight * exposurePercentage) / 100
+                ) {
+                  const start = parseInt($el.data("start"));
+                  const end = parseInt($el.data("end"));
+                  updateCounter($el, start, end);
+                  $el.data("scrolled", true);
+                }
+              }
+            });
+          })
+          .scroll();
+      });
+    </script>
+  </body>
+</html>
