@@ -1823,6 +1823,7 @@ r .m_nav .nav_ul2 {
 }
 .sec05_img {
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 #section06 {
@@ -1850,7 +1851,7 @@ r .m_nav .nav_ul2 {
   padding-top: 100%;
 }
 .cont_num {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 900;
 }
 
@@ -3457,9 +3458,6 @@ body.modal-open[style] {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.ft_bt {
-  padding-top: 4rem;
-}
 .ft_bt img {
   width: 15rem;
   margin-bottom: 1.9rem;
@@ -4729,7 +4727,7 @@ body.modal-open[style] {
     width: 5.4rem;
   }
   .cont_num {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .item_top1 {
@@ -5115,9 +5113,6 @@ body.modal-open[style] {
   .ft_customer .info_txt {
     font-size: 1.3rem;
     word-break: keep-all;
-  }
-  .ft_bt {
-    padding-top: 3rem;
   }
   .ft_bt img {
     width: 10.4rem;
